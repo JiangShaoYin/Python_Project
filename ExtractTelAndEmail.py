@@ -1,4 +1,3 @@
-#!   /usr/bin/python3
 #    coding:utf-8
 #	 @file    ExtractTelAndEmail.py
 #	 @author  Sean(jiangshaoyin@pku.edu.cn)
