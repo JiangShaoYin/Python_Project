@@ -10,3 +10,8 @@ import numpy as np
 
 import os
 print (os.path.abspath('.'))
+print (os.path.relpath('/usr','.'))
+print ('~/Python_Project'.split(os.path.sep))
+print ('/usr/include/spawn.h'.split(os.path.sep))
+print (os.listdir('.'))
+print (os.path.getsize('.'))
