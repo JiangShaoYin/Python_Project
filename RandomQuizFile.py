@@ -16,11 +16,12 @@ capitals ={'Alabama':'Montgomery','Alaska':'Juneau','Arizona':'Phoenix',
         'Minnesota':'Saint Paul','Mississipppi':'Jackson', 'Missouri':'Jerferson City',
         'Montana':'Helena','Nebraska':'Lincoln', 'Nevada':'Carson City','New Hampshire':'Concord',
         'Newjersey':'Trenton', 'New Mexico':'Santa Fe','New York':'Albany', 'North Carolina':'Raleigh'
-        'North Dakota':'Bismarcck', 'Ohio':'Columbus', 'Oklahoma':'Oklahoma City'
-        'Oregon':'Salem', 'Pennsylvania':'Harrisburg', 'Rhode Island':'Providence',
-        'South Carolina':'Columbia', 'South Dakota':'Pierre', 'Tennessee':'Nashville'
-        'Texas':'Austin', 'Utah':'Salt Lake City','Vermont':'Montpelier', 'Virginia':'Richmond',
-        'Washington':'Olypia', 'WestVirginia':'Charlesston', 'Wisconsin':'Madison','Wyoming','cheyenne'}
+#        'North Dakota':'Bismarcck', 'Ohio':'Columbus', 'Oklahoma':'Oklahoma City'
+#        'Oregon':'Salem', 'Pennsylvania':'Harrisburg', 'Rhode Island':'Providence',
+#        'South Carolina':'Columbia', 'South Dakota':'Pierre', 'Tennessee':'Nashville'
+#        'Texas':'Austin', 'Utah':'Salt Lake City','Vermont':'Montpelier', 'Virginia':'Richmond',
+#        'Washington':'Olypia', 'WestVirginia':'Charlesston', 'Wisconsin':'Madison','Wyoming','cheyenne'
+}
 
 #generate 35 quiz file
 for quiz_num in range(35):
@@ -31,8 +32,12 @@ for quiz_num in range(35):
     quiz_file.write('Name:\n\nDate:\n\nPeriod:\n\n')
     quiz_file.write((''*20)+'State Capitals Quiz(Form %s)' % quiz_num +'\n\n')
 
-    #shuffle the order of the states
-    states = list(capital)
+    #shuffle the order of the states,用shuffle函数
+    states = list(capitals.keys())     #capital.keys() return all the keys of the dict(return value is not a list,so use function list() to transform it to a list )
+    print (states)
+    rd.shuffle(states)
+    print ('--------------------------------------------------------------------------------------------')
+    print (states)
 
 
 
